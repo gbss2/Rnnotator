@@ -2,4 +2,3 @@
 
 export(interactionDrugGene)
 export(interactionGeneDrug)
-export(teste)
