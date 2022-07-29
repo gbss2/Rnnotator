@@ -2,3 +2,4 @@
 
 export(interactionDrugGene)
 export(interactionGeneDrug)
+export(encode_rest)
