@@ -17,4 +17,5 @@ Imports:
     httr,
     jsonlite,
     purrr,
+    stringr,
     tibble

@@ -7,11 +7,11 @@
 ensembl_convert(asm_one, asm_two, chr, coord_start, coord_end, strand)
 }
 \arguments{
-\item{asm_one}{Version of the input assembly    -    GRCh37}
+\item{asm_one}{Version of the input assembly    -    (Ex: GRCh37)}
 
-\item{asm_two}{Version of the output assembly    -    GRCh38}
+\item{asm_two}{Version of the output assembly    -    (Ex: GRCh38)}
 
-\item{chr}{Query region    -    X:1000000..1000100:1, X:1000000..1000100:-1, X:1000000..1000100}
+\item{chr}{type cromossomo    X}
 
 \item{coord_start}{Coordinate start}
 
@@ -21,6 +21,9 @@ ensembl_convert(asm_one, asm_two, chr, coord_start, coord_end, strand)
 }
 \value{
 A data frame.
+# assembly seq_region_name     end coord_system   start strand
+# 1   GRCh37               X 1000100   chromosome 1000000      1
+# 2   GRCh38               X 1039365   chromosome 1039265      1
 }
 \description{
 Convert the co-ordinates of one assembly to another
@@ -36,9 +39,7 @@ strand = "1")
 
 # /map/human/GRCh37/X:1000000..1000100:1/GRCh38?content-type=application/json
 
-# assembly seq_region_name     end coord_system   start strand
-# 1   GRCh37               X 1000100   chromosome 1000000      1
-# 2   GRCh38               X 1039365   chromosome 1039265      1
+
 
 
 
