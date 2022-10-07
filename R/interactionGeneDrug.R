@@ -14,7 +14,7 @@
 #’
 #' @examples
 #'
-#' res <- interactionGeneDrug(gene='FLT1,FLT3', interaction_sources='TALC', anti_neoplastic='true')
+#' res <- interactionGeneDrug(gene='NINTEDANIB,CENISERTIB', interaction_sources='TALC', anti_neoplastic='true')
 #'
 interactionGeneDrug <- function(gene=gene, typeReturn='data_frame', interaction_sources=NULL, interaction_types=NULL, anti_neoplastic=NULL, gene_categories=NULL, clinically_actionable=NULL) {
   url = (paste("https://dgidb.org/api/v2/interactions.json?genes=", gene, sep=''))
