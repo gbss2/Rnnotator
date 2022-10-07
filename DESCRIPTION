@@ -10,3 +10,11 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.1
+Imports: 
+    dplyr,
+    glue,
+    gt,
+    httr,
+    jsonlite,
+    purrr,
+    tibble

@@ -2,27 +2,43 @@
 % Please edit documentation in R/InteractionDrugGene.R
 \name{interactionDrugGene}
 \alias{interactionDrugGene}
-\title{Show the interactions between a given set of drugs and a gene names}
+\title{Show the interactions between a given set of drugs and a genes names}
 \usage{
-interactionDrugGene(drugs, itype)
+interactionDrugGene(
+  drug = drug,
+  typeReturn = "data_frame",
+  interaction_sources = NULL,
+  interaction_types = NULL,
+  anti_neoplastic = NULL,
+  gene_categories = NULL,
+  clinically_actionable = NULL
+)
 }
 \arguments{
-\item{drugs}{: A set of drugs (required)*.}
+\item{drug}{: (required) - A set of drugs}
 
-\item{itype}{: Interaction type - can be: inhibitor or activator (optional)*.}
+\item{typeReturn}{: (optional) - "data_frame" (default) or "'table" (first: use library(gt) and gt(res) - res as function return).}
+
+\item{interaction_sources}{: (optional) - Can be : "DrugBank","PharmGKB","TALC","TEND","TTD"}
+
+\item{interaction_types}{: (optional) - Can be: "activator", "inhibitor", "unknown" - (For some researches, params like interaction_types don't work properly, you should use interaction_source instead)}
+
+\item{anti_neoplastic}{: (optional) - Can be: "true"}
+
+\item{gene_categories}{: (optional) - Can be: "KINASE", "DNA REPAIR", "TUMOR SUPPRESSOR"}
+
+\item{clinically_actionable}{: (optional) - Can be: "true"}
 }
 \value{
-A character list.
+A data frame or gt table.
 }
 \description{
-Show the interactions between a given set of drugs and a gene names
+Show the interactions between a given set of drugs and a genes names
 }
 \examples{
 
-res <- interactionDrugGene("VATALANIB", "inhibitor")
-res
-VATALANIB - KDR
-VATALANIB - CSF1R
+res <- interactionDrugGene(drug='FLT1,FLT3', interaction_sources='TALC', anti_neoplastic='true')
+
 }
 \author{
 Adriano Viegas
