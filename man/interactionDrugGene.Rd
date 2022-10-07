@@ -37,7 +37,7 @@ Show the interactions between a given set of drugs and a genes names
 }
 \examples{
 
-res <- interactionDrugGene(drug='FLT1,FLT3', interaction_sources='TALC', anti_neoplastic='true')
+res <- interactionDrugGene(drug='NINTEDANIB', interaction_sources='TALC', anti_neoplastic='true')
 
 }
 \author{
