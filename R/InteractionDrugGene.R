@@ -25,6 +25,7 @@ interactionDrugGene = function(drugs, itype) {
   cnt = 1
   res = list()
   #teste
+  #teste
   for(i in out$matchedTerms$drugName){
     res[i] = list(out$matchedTerms$interactions[[cnt]]$geneName)
     cnt = cnt + 1
