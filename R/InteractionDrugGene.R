@@ -24,6 +24,7 @@ interactionDrugGene = function(drugs, itype) {
   out = head(fromJSON(toJSON(content(out))))
   cnt = 1
   res = list()
+  #teste
   for(i in out$matchedTerms$drugName){
     res[i] = list(out$matchedTerms$interactions[[cnt]]$geneName)
     cnt = cnt + 1
