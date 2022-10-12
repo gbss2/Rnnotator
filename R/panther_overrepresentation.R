@@ -1,17 +1,17 @@
 #'Overrepresentation test
 #'
-#' @description This test tool, compares a test gene list to a reference gene list, and determines whether a particular class (e.g. molecular function, biological process, cellular component, PANTHER protein class, the PANTHER pathway or Reactome pathway) of genes is overrepresented or underrepresented.
+#' @description Compare a input list with a reference list, and determine whether a particular functional class (e.g. molecular function, biological process, cellular component) is overrepresented or underrepresented in input list.
 #' @description PANTHER tools for overrepresentation test using either Binomial or Fisher's Exact Test
 #'
 #' @author Michele Molina e Rafaella Ferraz
 #'
-#' @param genes  Genes identifier. Maximum of 1000 Identifiers can be any of the following: Ensemble gene identifier, Ensemble protein identifier, Ensemble transcript identifier, Entrez gene id, gene symbol, NCBI GI, HGNC Id, International protein index id, NCBI UniGene id, UniProt accession andUniProt id
+#' @param genes  Genes identifier. Maximum of 1000 Identifiers. Examples: Ensemble gene identifier, Ensemble protein identifier, Ensemble transcript identifier, Entrez gene id, gene symbol, NCBI GI, HGNC Id, International protein index id, NCBI UniGene id, UniProt accession andUniProt id.
 #' @param organism One taxon id required. Ex.: 9606
-#' @param ref_list If not specified, the system will use all the genes for the specified organism. Each identifier to be delimited by comma i.e. ','. Maximum of 100000 Identifiers can be any of the following: Ensemble gene identifier, Ensemble protein identifier, Ensemble transcript identifier, Entrez gene id, gene symbol, NCBI GI, HGNC Id, International protein index id, NCBI UniGene id, UniProt accession andUniProt id
-#' @param refOrganism This parameter is only required, if parameter 'refInputList' has been specified. Only one taxon id can be specified. Retrieve the list of supported genomes and corresponding taxon ids from the 'supportedgenomes' service.
-#' @param annotDataSet One of the supported PANTHER annotation data types. Use the 'supportedannotdatasets' service to retrieve list of supported annotation data types. Ex: GO:0003674
-#' @param testtype Fisher's Exact test will be used by default. Options - "FISHER" and "BINOMIAL"
-#' @param correction correction of enrichment. Options - "FDR", "BONFERRONI" and "NONE"
+#' @param ref_list If not specified, the system will use all the genes for the specified organism. Each identifier to be delimited by comma i.e. ','. Maximum of 100000 Identifiers. Examples: Ensemble gene identifier, Ensemble protein identifier, Ensemble transcript identifier, Entrez gene id, gene symbol, NCBI GI, HGNC Id, International protein index id, NCBI UniGene id, UniProt accession andUniProt id.
+#' @param refOrganism This parameter is only required if parameter 'ref_list' has been specified. Only one taxon id can be specified.
+#' @param annotDataSet One of the supported PANTHER annotation data types. Use the 'support_annot' function to retrieve list of supported annotation data types. Ex: GO:0003674
+#' @param testtype Fisher's Exact test will be used by default. Options: "FISHER" and "BINOMIAL"
+#' @param correction correction of enrichment. Options: "FDR", "BONFERRONI" and "NONE"
 #'
 #' @return Return a dataframe:
 #' @return number_in_list
